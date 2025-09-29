@@ -9,6 +9,7 @@
 //     "youtube thumbnail, thumbnail download, youtube thumbnail grabber, hd thumbnails",
 // };
 
+import Image from "next/image";
 import DownloadButton from "../components/DownloadButton";
 
 // Inside your thumbnails.map(...)
@@ -65,9 +66,15 @@ interface HomePageProps {
   searchParams: { url?: string };
 }
 
+interface Thumbnail {
+  url: string;
+  quality: string;
+  dimensions: string;
+}
+
 export default function Home({ searchParams }: HomePageProps) {
   const url = searchParams.url;
-  let thumbnails: any[] = [];
+  let thumbnails: Thumbnail[] = [];
   let videoId: string | null = null;
   let error: string | null = null;
 
@@ -171,11 +178,13 @@ export default function Home({ searchParams }: HomePageProps) {
                     className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow"
                   >
                     <div className="relative aspect-video bg-gray-100">
-                      <img
+                      <Image
                         src={thumbnail.url}
                         alt={`YouTube thumbnail ${thumbnail.quality}`}
+                        width={1280} // max width you expect
+                        height={720} // max height you expect
                         className="w-full h-full object-cover"
-                        loading="lazy"
+                        priority={false}
                       />
                     </div>
                     <div className="p-4">

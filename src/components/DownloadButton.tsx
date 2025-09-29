@@ -15,8 +15,8 @@ export default function DownloadButton({ url, filename }: DownloadButtonProps) {
       link.download = filename;
       link.click();
       URL.revokeObjectURL(link.href);
-    } catch (err) {
-      alert("⚠️ Failed to download image. Try right-click → Save As instead.");
+    } catch {
+      alert("Failed to download. Try right-click → Save As instead.");
     }
   };
 
