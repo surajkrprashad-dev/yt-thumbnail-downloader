@@ -1,13 +1,3 @@
-// // app/page.tsx
-// import { Metadata } from "next";
-
-// export const metadata: Metadata = {
-//   title: "YouTube Thumbnail Grabber - Download HD Thumbnails for Free",
-//   description:
-//     "Free YouTube thumbnail downloader. Extract high-quality thumbnails from any YouTube video in multiple resolutions.",
-//   keywords:
-//     "youtube thumbnail, thumbnail download, youtube thumbnail grabber, hd thumbnails",
-// };
 
 import Image from "next/image";
 import DownloadButton from "../components/DownloadButton";
