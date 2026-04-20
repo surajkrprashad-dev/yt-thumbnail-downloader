@@ -15,6 +15,7 @@ https://yt-thumbnail-downloader-chi.vercel.app/
 1. Paste a YouTube video URL.
 2. The app extracts the video ID.
 3. It generates the thumbnail using YouTube’s thumbnail format.
+4. Multiple sizes are avaiable to be download from.
 
 Example:
 ![App Preview](./public/preview.jpg)
