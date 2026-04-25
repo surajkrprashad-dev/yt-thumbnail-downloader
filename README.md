@@ -20,7 +20,6 @@ https://yt-thumbnail-downloader-chi.vercel.app/
 Example:
 ![App Preview](./public/preview.jpg)
 
-
 ## Tech Stack
 - Next.js
 - React
